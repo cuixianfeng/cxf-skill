@@ -20,8 +20,8 @@
 
 - `skills/cxf/`：总入口，介绍三个板块并分流
 - `skills/cxf-library/`：先锋资料库
+- `skills/cxf-topic/`：先锋选题（读【我的档案】，最多 5 条）
 - `skills/cxf-fetch/`：先锋抓取（链接 / 对标账号 / 逐字稿）
-- 先锋选题 `cxf-topic` 发布时，放进 `skills/cxf-topic/`
 
 ## 发布步骤
 
@@ -38,7 +38,7 @@ git push -u origin main
 ```
 
 3. 可选：打版本标签 `v1.0.0`，在 GitHub 上建一个 Release。
-4. 验证安装：在一个空目录运行 `npx skills add cuixianfeng/cxf-skill --list`，应列出 `cxf`、`cxf-library` 和 `cxf-fetch`。
+4. 验证安装：在一个空目录运行 `npx skills add cuixianfeng/cxf-skill --list`，应列出 `cxf`、`cxf-library`、`cxf-topic` 和 `cxf-fetch`。
 
 ## 发布前检查
 
@@ -59,4 +59,18 @@ git push -u origin main
 # 本地提交后推送到 main，再打标签
 git tag v1.1.0
 # 或在 GitHub 上创建 Release：标题「先锋 CXF Skill 1.1.0」，说明新增先锋抓取
+```
+
+## 1.2.0（2026-11-03）
+
+- 新增并发布 **先锋选题** `cxf-topic`：自动找【我的档案】，有大致方向即可出题；一次最多 5 条（题干 + 依据 + 一句为什么适合你）；有产品优先转化/引流，无产品优先流量。
+- 总入口 `cxf`：用户说「请用 CXF 选题 Skill」「帮我选题」「今天拍什么」等，直接进入 `cxf-topic`。
+- README 补选题用法；安装说明包含 `cxf-topic`。
+- 验证：`npx skills add cuixianfeng/cxf-skill --list` 应列出 `cxf`、`cxf-library`、`cxf-topic`、`cxf-fetch`。
+
+发布本版：
+
+```bash
+git tag v1.2.0
+# GitHub Release 标题：「v1.2.0 先锋选题 cxf-topic」
 ```

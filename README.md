@@ -1,6 +1,6 @@
 # 先锋 CXF Skill
 
-![version](https://img.shields.io/badge/version-1.1.0-blue) ![license](https://img.shields.io/badge/license-MIT-green) ![agent-skills](https://img.shields.io/badge/agent--skills-中文-orange)
+![version](https://img.shields.io/badge/version-1.2.0-blue) ![license](https://img.shields.io/badge/license-MIT-green) ![agent-skills](https://img.shields.io/badge/agent--skills-中文-orange)
 
 **让 AI 认识你，再帮你做自媒体。** 先锋 CXF 是一套中文 Agent Skill，作者：崔先锋。国内 Agent（WorkBuddy 等）可用，档案可存进腾讯 ima 或本地。
 
@@ -11,7 +11,7 @@
 | 板块 | 做什么 | 状态 |
 |---|---|---|
 | 先锋资料库 cxf-library | 聊几句天，让 AI 认识你，整理成一份【我的档案】 | ✅ 已发布 |
-| 先锋选题 cxf-topic | 每天给你出选题，先读你的资料库，每条注明依据编号 | 即将发布 |
+| 先锋选题 cxf-topic | 每天给你出选题，先读你的资料库，每条注明依据编号 | ✅ 已发布 |
 | 先锋抓取 cxf-fetch | 抓链接、对标账号、热点内容 | ✅ 已发布 |
 
 另有总入口 `cxf`：不知道从哪开始，就说「先锋能帮我做什么」，它会介绍三个板块，并把你的话交给对的板块。
@@ -26,11 +26,11 @@
 npx skills add cuixianfeng/cxf-skill
 ```
 
-会装上本仓库里的全部 Skill（目前是 `cxf`、`cxf-library` 和 `cxf-fetch`）。
+会装上本仓库里的全部 Skill（`cxf`、`cxf-library`、`cxf-topic` 和 `cxf-fetch`）。
 
 **方式二：手动安装**
 
-把仓库里 `skills/` 下的 `cxf`、`cxf-library`、`cxf-fetch` 文件夹，整个复制到你所用 Agent 的 skills 目录下。只想要资料库，复制 `cxf-library` 一个也能用；只要抓取，复制 `cxf-fetch` 即可。
+把仓库里 `skills/` 下的 `cxf`、`cxf-library`、`cxf-topic`、`cxf-fetch` 文件夹，整个复制到你所用 Agent 的 skills 目录下。只想要资料库，复制 `cxf-library` 一个也能用；只要选题，复制 `cxf-topic`（出题会读【我的档案】，建议同时保留 `cxf-library`）；只要抓取，复制 `cxf-fetch` 即可。
 
 **方式三：WorkBuddy 用户**
 
@@ -101,7 +101,7 @@ npx skills add cuixianfeng/cxf-skill
 
 每条信息都标 [原话] [事实] [推测] [待确认]，AI 不会把猜的当成事实写进文案。
 
-存法：在 ima 里新建一个知识库（比如叫「先锋资料库」），把这篇存进去；以后用先锋选题时勾选这个库。更新后，同一个库里只留最新版。
+存法：在 ima 里新建一个知识库（比如叫「先锋资料库」），把这篇存进去。用先锋选题时可以勾选这个库，也可以直接说「帮我选题」，它会自己找到这篇。更新后，同一个库里只留最新版。
 
 ## 设计原则
 
@@ -121,6 +121,27 @@ npx skills add cuixianfeng/cxf-skill
 - 本仓库的 Skill 不上传你的文件到任何第三方，不读取密钥、密码，档案存在你自己选的地方。
 - 示例中的人物和数据全部为虚构。
 
+
+---
+
+# 先锋选题 cxf-topic
+
+**读【我的档案】，一次给你最多 5 条现在就能拍的选题。** 每条写清题干、依据编号、一句为什么适合你。不写标题、封面和文案。
+
+## 怎么用
+
+装好后，对 AI 说一句：
+
+- 「请用 CXF 选题 Skill 帮我做选题」
+- 「帮我选题」
+- 「今天拍什么」
+- 「给我几个题」「出选题」
+
+不用自己点档案路径。它会自动找标题为【我的档案】的那一篇：当前对话里贴过的、你勾选或关联的知识库、或你刚才点名的库。
+
+有一个大致方向就能出题，不必档案八节全齐。方向太糊时，最多反问一句；你跳过或答不上，也照样出题，并标明方向待你改。唯一会停下来的情况：找不到档案，而且你这句话里完全没有方向——这时会请你先用先锋资料库建一份，或先说一句大致方向。
+
+一次最多交 5 条。材料太薄就少交几条，并说明补哪类信息，下次能出满 5。档案里有产品或服务时，优先能带来咨询、私信、了解产品的题（转化、引流）；没有产品时，优先容易引起共鸣、讨论、转发的题（流量）。默认不做行业调研。
 
 ---
 
@@ -152,7 +173,7 @@ npx skills add cuixianfeng/cxf-skill
 
 ## 版本
 
-当前版本 1.1.0（`cxf` 1.1.0，`cxf-library` 1.0.0，`cxf-fetch` 1.0.0）（见 [VERSION](VERSION)）。
+当前版本 1.2.0（`cxf` 1.2.0，`cxf-library` 1.0.0，`cxf-topic` 1.0.0，`cxf-fetch` 1.0.0）（见 [VERSION](VERSION)）。
 
 ## License
 

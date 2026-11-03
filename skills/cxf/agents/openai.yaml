@@ -1,0 +1,4 @@
+interface:
+  display_name: "cxf（先锋 CXF 总入口）"
+  short_description: "先锋 CXF 总入口：介绍资料库、选题、抓取三个板块，并把你的请求交给对的板块"
+  default_prompt: "使用 $cxf，先锋能帮我做什么？"

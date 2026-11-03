@@ -1,4 +1,4 @@
 interface:
   display_name: "cxf-topic（先锋选题）"
   short_description: "读【我的档案】，交出最多5条带依据的自媒体选题；不写标题封面文案"
-  default_prompt: "使用 $cxf-topic，请用 CXF 选题 Skill 结合我的知识库帮我做选题。"
+  default_prompt: "使用 $cxf-topic，用 CXF 选题 Skill 帮我做选题。"

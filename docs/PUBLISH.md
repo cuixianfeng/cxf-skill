@@ -64,7 +64,7 @@ git tag v1.1.0
 ## 1.2.0（2026-11-03）
 
 - 新增并发布 **先锋选题** `cxf-topic`：自动找【我的档案】，有大致方向即可出题；一次最多 5 条（题干 + 依据 + 一句为什么适合你）；有产品优先转化/引流，无产品优先流量。
-- 总入口 `cxf`：用户说「请用 CXF 选题 Skill」「帮我选题」「今天拍什么」等，直接进入 `cxf-topic`。
+- 总入口 `cxf`：用户说「用 CXF 选题 Skill」「请用 CXF 选题 Skill 帮我做选题」「帮我选题」「今天拍什么」等，直接进入 `cxf-topic`。
 - README 补选题用法；安装说明包含 `cxf-topic`。
 - 验证：`npx skills add cuixianfeng/cxf-skill --list` 应列出 `cxf`、`cxf-library`、`cxf-topic`、`cxf-fetch`。
 

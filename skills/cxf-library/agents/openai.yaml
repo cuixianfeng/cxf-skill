@@ -1,0 +1,4 @@
+interface:
+  display_name: "cxf-library（先锋资料库）"
+  short_description: "一次一问的聊天采访，帮你建一份【我的档案】，供 AI 自媒体选题和日常助理读取"
+  default_prompt: "使用 $cxf-library，帮我建资料库。"

@@ -1,0 +1,17 @@
+# 系统和编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# 本地测试与个人资料（不要把真实档案提交到仓库）
+evals/
+tmp/
+*.local.md
+我的档案*.md
+【我的档案】*.md
+
+# 环境与密钥
+.env
+.env.*

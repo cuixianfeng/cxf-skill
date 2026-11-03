@@ -1,6 +1,6 @@
 # 先锋 CXF Skill
 
-![version](https://img.shields.io/badge/version-1.0.0-blue) ![license](https://img.shields.io/badge/license-MIT-green) ![agent-skills](https://img.shields.io/badge/agent--skills-中文-orange)
+![version](https://img.shields.io/badge/version-1.1.0-blue) ![license](https://img.shields.io/badge/license-MIT-green) ![agent-skills](https://img.shields.io/badge/agent--skills-中文-orange)
 
 **让 AI 认识你，再帮你做自媒体。** 先锋 CXF 是一套中文 Agent Skill，作者：崔先锋。国内 Agent（WorkBuddy 等）可用，档案可存进腾讯 ima 或本地。
 
@@ -12,7 +12,7 @@
 |---|---|---|
 | 先锋资料库 cxf-library | 聊几句天，让 AI 认识你，整理成一份【我的档案】 | ✅ 已发布 |
 | 先锋选题 cxf-topic | 每天给你出选题，先读你的资料库，每条注明依据编号 | 即将发布 |
-| 先锋抓取 cxf-fetch | 抓链接、对标账号、热点内容 | 即将发布 |
+| 先锋抓取 cxf-fetch | 抓链接、对标账号、热点内容 | ✅ 已发布 |
 
 另有总入口 `cxf`：不知道从哪开始，就说「先锋能帮我做什么」，它会介绍三个板块，并把你的话交给对的板块。
 
@@ -26,11 +26,11 @@
 npx skills add cuixianfeng/cxf-skill
 ```
 
-会装上本仓库里的全部 Skill（目前是 `cxf` 和 `cxf-library`）。
+会装上本仓库里的全部 Skill（目前是 `cxf`、`cxf-library` 和 `cxf-fetch`）。
 
 **方式二：手动安装**
 
-把仓库里 `skills/` 下的 `cxf` 和 `cxf-library` 两个文件夹，整个复制到你所用 Agent 的 skills 目录下。只想要资料库，复制 `cxf-library` 一个也能用。
+把仓库里 `skills/` 下的 `cxf`、`cxf-library`、`cxf-fetch` 文件夹，整个复制到你所用 Agent 的 skills 目录下。只想要资料库，复制 `cxf-library` 一个也能用；只要抓取，复制 `cxf-fetch` 即可。
 
 **方式三：WorkBuddy 用户**
 
@@ -121,9 +121,38 @@ npx skills add cuixianfeng/cxf-skill
 - 本仓库的 Skill 不上传你的文件到任何第三方，不读取密钥、密码，档案存在你自己选的地方。
 - 示例中的人物和数据全部为虚构。
 
+
+---
+
+# 先锋抓取 cxf-fetch
+
+**发链接，或说调研某个博主，就把公开作品的数据和逐字稿抓下来。** 先锋抓取支持抖音、B站、YouTube；小红书和视频号走备选（本地文件转写）。只处理公开内容，仅供个人学习研究。
+
+## 怎么用
+
+装好后，对 AI 说一句，或直接丢链接：
+
+- 「抓这个链接」+ 作品链接或分享文案
+- 「调研这个博主近半年点赞最高的10条」+ 主页链接
+- 「平台抓取」「对标账号」「转写成文案」
+- 本地视频/音频文件：只做转写
+
+默认近半年、按点赞、前 10 条；能从话里推断的参数不会再问。
+
+## 依赖说明
+
+- 需要 **Python 3.10+**。第一次在本 Skill 的 `scripts/` 目录执行 `pip install -r requirements.txt`，再跑 `python platform_top.py doctor` 自检。
+- 浏览器：优先用本机已装的 **Chrome / Edge**；没有时再装 Playwright 的 Chromium。
+- 语音识别模型（SenseVoice + 标点，约 **230 MB**）在第一次转写时自动下载。
+- YouTube 单条等场景可能还需要 `yt-dlp`。
+
+## 合规
+
+只抓公开作品，用于个人学习研究。不转载、不二次分发原视频或文案、不商用。登录 cookie 只存在本机。一次只调研一个博主，不要并发狂跑。
+
 ## 版本
 
-当前版本 1.0.0（`cxf` 1.0.0，`cxf-library` 1.0.0）（见 [VERSION](VERSION)）。
+当前版本 1.1.0（`cxf` 1.1.0，`cxf-library` 1.0.0，`cxf-fetch` 1.0.0）（见 [VERSION](VERSION)）。
 
 ## License
 

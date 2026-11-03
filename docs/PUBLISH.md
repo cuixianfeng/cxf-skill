@@ -20,7 +20,8 @@
 
 - `skills/cxf/`：总入口，介绍三个板块并分流
 - `skills/cxf-library/`：先锋资料库
-- 先锋选题 `cxf-topic`、先锋抓取 `cxf-fetch` 发布时，各放进 `skills/` 下一个同名文件夹
+- `skills/cxf-fetch/`：先锋抓取（链接 / 对标账号 / 逐字稿）
+- 先锋选题 `cxf-topic` 发布时，放进 `skills/cxf-topic/`
 
 ## 发布步骤
 
@@ -37,10 +38,25 @@ git push -u origin main
 ```
 
 3. 可选：打版本标签 `v1.0.0`，在 GitHub 上建一个 Release。
-4. 验证安装：在一个空目录运行 `npx skills add cuixianfeng/cxf-skill --list`，应列出 `cxf` 和 `cxf-library`。
+4. 验证安装：在一个空目录运行 `npx skills add cuixianfeng/cxf-skill --list`，应列出 `cxf`、`cxf-library` 和 `cxf-fetch`。
 
 ## 发布前检查
 
 - 仓库里没有真实用户的档案（`.gitignore` 已忽略 `我的档案*.md`）。
 - 示例全部为虚构，并已标注。
 - 没有密钥、个人路径、测试记录。
+
+## 1.1.0（2026-11-03）
+
+- 新增并发布 **先锋抓取** `cxf-fetch`：支持发链接 / 调研博主近半年点赞最高等内容，产出清单与逐字稿。
+- 总入口 `cxf` 将抓取类请求直接分流到 `cxf-fetch`（不再写「另行发布」）。
+- README 补抓取用法、依赖（Python、Chrome/Edge、首次语音模型约 230MB）与合规说明。
+- 验证：`npx skills add cuixianfeng/cxf-skill --list` 应列出 `cxf`、`cxf-library`、`cxf-fetch`。
+
+发布本版：
+
+```bash
+# 本地提交后推送到 main，再打标签
+git tag v1.1.0
+# 或在 GitHub 上创建 Release：标题「先锋 CXF Skill 1.1.0」，说明新增先锋抓取
+```

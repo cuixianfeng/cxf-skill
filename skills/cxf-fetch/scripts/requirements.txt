@@ -1,0 +1,6 @@
+httpx
+playwright
+sherpa-onnx
+numpy
+imageio-ffmpeg
+# 可选：YouTube/其他站单条 -> yt-dlp ；不想用 SenseVoice -> faster-whisper

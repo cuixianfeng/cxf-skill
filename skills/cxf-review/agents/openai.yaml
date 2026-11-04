@@ -1,0 +1,4 @@
+interface:
+  display_name: "cxf-review（崔先锋复盘）"
+  short_description: "发布后复盘：主动要后台截图和客资数，记进「数据复盘」文件夹，满 10 条再总结规律"
+  default_prompt: "使用 $cxf-review，用 CXF 复盘 Skill 帮我复盘这条视频。"

@@ -1,12 +1,12 @@
 # 崔先锋 CXF Skill
 
-![version](https://img.shields.io/badge/version-1.3.0-blue) ![license](https://img.shields.io/badge/license-MIT-green) ![agent-skills](https://img.shields.io/badge/agent--skills-中文-orange)
+![version](https://img.shields.io/badge/version-1.4.0-blue) ![license](https://img.shields.io/badge/license-MIT-green) ![agent-skills](https://img.shields.io/badge/agent--skills-中文-orange)
 
 **让 AI 认识你，再帮你做自媒体。** 崔先锋 CXF 是一套中文 Agent Skill，作者：崔先锋。国内外支持 Skill 的 Agent 都能用（WorkBuddy、Claude Code、Codex 等），档案可存进腾讯 ima 或本地。
 
 关键词：AI自媒体、自媒体选题、口播稿、文案检查、防限流、个人知识库、资料库、内容抓取、WorkBuddy、ima。
 
-## 六个板块
+## 七个板块
 
 | 板块 | 做什么 | 状态 |
 |---|---|---|
@@ -15,11 +15,12 @@
 | 崔先锋写稿 cxf-script | 把挑中的选题写成你能直接念的口播稿，另附 2 个备选开头 | ✅ 已发布 |
 | 崔先锋检查 cxf-check | 发布前查稿：四项分开查：AI 味、防限流、逻辑连贯、看不懂 | ✅ 已发布 |
 | 崔先锋防限流 cxf-safe | AI 自媒体专用：发布前换掉软件名、Logo、导流；被限流了一步步抢救 | ✅ 已发布 |
+| 崔先锋复盘 cxf-review | 发布后要截图、记数据，存进「数据复盘」文件夹，越用越懂你 | ✅ 已发布 |
 | 崔先锋抓取 cxf-fetch | 抓链接、对标账号、热点内容 | ✅ 已发布 |
 
 另有总入口 `cxf`：不知道从哪开始，就说「崔先锋能帮我做什么」，它会介绍各个板块，并把你的话交给对的板块。
 
-资料库是底，只建一次。之后每天走一遍：选题 → 写稿 → 检查。每一步做完，它会问你要不要接着下一步，你回一个编号或「要」就行。
+资料库是底，只建一次。之后每天走一遍：选题 → 写稿 → 检查，发出两三天后再复盘。每一步做完，它会问你要不要接着下一步，你回一个编号或「要」就行。
 
 ## 怎么安装
 
@@ -29,11 +30,11 @@
 npx skills add cuixianfeng/cxf-skill
 ```
 
-会装上本仓库里的全部 Skill（`cxf`、`cxf-library`、`cxf-topic`、`cxf-script`、`cxf-check`、`cxf-safe` 和 `cxf-fetch`）。
+会装上本仓库里的全部 Skill（`cxf`、`cxf-library`、`cxf-topic`、`cxf-script`、`cxf-check`、`cxf-safe`、`cxf-review` 和 `cxf-fetch`）。
 
 **方式二：手动安装**
 
-把仓库里 `skills/` 下的 `cxf`、`cxf-library`、`cxf-topic`、`cxf-script`、`cxf-check`、`cxf-safe`、`cxf-fetch` 文件夹，整个复制到你所用 Agent 的 skills 目录下。只想要资料库，复制 `cxf-library` 一个也能用；只要选题，复制 `cxf-topic`（出题会读【我的档案】，建议同时保留 `cxf-library`）；写稿 `cxf-script` 同样读【我的档案】；检查 `cxf-check`、防限流 `cxf-safe` 单独就能用；只要抓取，复制 `cxf-fetch` 即可。
+把仓库里 `skills/` 下的 `cxf`、`cxf-library`、`cxf-topic`、`cxf-script`、`cxf-check`、`cxf-safe`、`cxf-review`、`cxf-fetch` 文件夹，整个复制到你所用 Agent 的 skills 目录下。只想要资料库，复制 `cxf-library` 一个也能用；只要选题，复制 `cxf-topic`（出题会读【我的档案】，建议同时保留 `cxf-library`）；写稿 `cxf-script` 同样读【我的档案】；检查 `cxf-check`、防限流 `cxf-safe`、复盘 `cxf-review` 单独就能用；只要抓取，复制 `cxf-fetch` 即可。
 
 **方式三：WorkBuddy 用户**
 
@@ -205,6 +206,33 @@ npx skills add cuixianfeng/cxf-skill
 
 ---
 
+# 崔先锋复盘 cxf-review
+
+**视频发出 48～72 小时后，把数据收回来，让 AI 越用越懂你。** 你说「复盘」，它会主动告诉你去后台哪一页截图，再问一句这条带来了几个客资，不用你自己记要发什么。
+
+## 怎么用
+
+- 「用 CXF 复盘 Skill，复盘这条」，或直接发来后台数据截图
+- 它会告诉你截哪一页：抖音、小红书、视频号、B 站、YouTube 各给一条路径
+- 读完先把数字列给你确认，确认后才写入
+
+## 记哪些数据
+
+播放量、开头留存（抖音 5 秒完播率等，后台显示哪个记哪个）、完播率、点赞、评论、转发，以及**客资数**（私信、加群、加微信合起来算）。截图里没有的项写「未填」，照样复盘。
+
+## 存在哪
+
+在存【我的档案】的知识库里新建一个「数据复盘」文件夹（本地就是档案旁边的 `数据复盘/`），**不写进档案本身**。里面三样：每条一份复盘记录（数据 + 复盘卡 + 稿子原文）、一张复盘汇总表、一份「规律」。
+
+## 越用越懂你
+
+- **不到 10 条**：只记录，每条出一张复盘卡：开头留没留住人、内容看没看完、有没有戳中人、带没带来客资，再给一条下次可以试的。
+- **满 10 条**：第一次总结，结论都标「待验证」。
+- **同一类有 3 条以上都对得上**：才写成「规律」。之后崔先锋选题和崔先锋写稿都会先读这份规律。
+
+不预测播放量。唯有实践才能成为大师：你拍得越多、复盘越多，它写出的东西越像你、越有效。
+
+---
 # 崔先锋抓取 cxf-fetch
 
 **发链接，或说调研某个博主，就把公开作品的数据和逐字稿抓下来。** 崔先锋抓取支持抖音、B站、YouTube；小红书和视频号走备选（本地文件转写）。只处理公开内容，仅供个人学习研究。
@@ -233,7 +261,7 @@ npx skills add cuixianfeng/cxf-skill
 
 ## 版本
 
-当前版本 1.3.0（`cxf` 1.3.0，`cxf-library` 1.0.0，`cxf-topic` 1.1.0，`cxf-script` 1.0.0，`cxf-check` 1.0.0，`cxf-safe` 1.0.0，`cxf-fetch` 1.0.0）（见 [VERSION](VERSION)）。
+当前版本 1.4.0（`cxf` 1.4.0，`cxf-library` 1.0.0，`cxf-topic` 1.2.0，`cxf-script` 1.1.0，`cxf-check` 1.0.0，`cxf-safe` 1.0.0，`cxf-review` 1.0.0，`cxf-fetch` 1.0.0）（见 [VERSION](VERSION)）。
 
 ## License
 

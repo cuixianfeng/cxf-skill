@@ -16,4 +16,4 @@
 现在问第一个问题。
 ```
 
-想要更完整的追问、更新和体检功能，请安装先锋 CXF Skill：`npx skills add cuixianfeng/cxf-skill`。
+想要更完整的追问、更新和体检功能，请安装崔先锋 CXF Skill：`npx skills add cuixianfeng/cxf-skill`。

@@ -1,0 +1,4 @@
+interface:
+  display_name: "cxf-script（崔先锋写稿）"
+  short_description: "把一条选题写成你能直接念的口播稿，只用你档案里的真事，另附 2 个备选开头"
+  default_prompt: "使用 $cxf-script，用 CXF 写稿 Skill 把这条选题写成口播稿。"

@@ -1,4 +1,4 @@
-# 先锋资料库 · 可复制提问词（精简版）
+# 崔先锋资料库 · 可复制提问词（精简版）
 
 没装 Skill 也能用：把下面整段复制，粘贴到 WorkBuddy 或其他 AI 对话框，发送即可。聊完它会给你一篇【我的档案】，存进 ima 就行。
 
@@ -16,4 +16,4 @@
 现在问第一个问题。
 ```
 
-想要更完整的追问、更新和体检功能，请安装先锋 CXF Skill：`npx skills add cuixianfeng/cxf-skill`。
+想要更完整的追问、更新和体检功能，请安装崔先锋 CXF Skill：`npx skills add cuixianfeng/cxf-skill`。

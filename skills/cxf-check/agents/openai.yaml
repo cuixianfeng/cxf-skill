@@ -1,0 +1,4 @@
+interface:
+  display_name: "cxf-check（崔先锋检查）"
+  short_description: "发布前查稿：四项分开查：AI 味、防限流、逻辑连贯、看不懂，每处给改法"
+  default_prompt: "使用 $cxf-check，用 CXF 检查 Skill 检查这篇稿子。"

@@ -3,7 +3,7 @@
 ## 仓库信息
 
 - 仓库：`cuixianfeng/cxf-skill`（公开，默认分支 `main`）
-- 描述（About）：崔先锋CXF Skill：让AI认识你的资料库 + 自媒体选题 + 口播写稿 + 发布前检查 + 内容抓取。国内外支持 Skill 的 Agent 都能用（WorkBuddy、Claude Code、Codex 等）。
+- 描述（About）：崔先锋CXF Skill：让AI认识你的资料库 + 自媒体选题 + 口播写稿 + 发布前检查 + 防限流 + 内容抓取。国内外支持 Skill 的 Agent 都能用（WorkBuddy、Claude Code、Codex 等）。
 - Topics：
   - agent-skills
   - claude-skills
@@ -23,6 +23,7 @@
 - `skills/cxf-topic/`：先锋选题（读【我的档案】，最多 5 条）
 - `skills/cxf-script/`：先锋写稿（把选题写成口播稿，另附 2 个备选开头）
 - `skills/cxf-check/`：先锋检查（风险词、AI 味、顺不顺）
+- `skills/cxf-safe/`：先锋防限流（AI 自媒体专用：软件名、Logo、导流；限流判断与抢救）
 - `skills/cxf-fetch/`：先锋抓取（链接 / 对标账号 / 逐字稿）
 
 ## 发布步骤
@@ -81,11 +82,12 @@ git tag v1.2.0
 
 - 新增 **先锋写稿** `cxf-script`：读【我的档案】，把一条选题写成约 1 分钟的口播稿，只用真事和原话；另附 2 个备选开头；交稿后问要不要检查。
 - 新增 **先锋检查** `cxf-check`：查风险词、AI 味、顺不顺，最多列 3 处必须改的并给改法；问要不要按这几处改好。
+- 新增 **先锋防限流** `cxf-safe`（AI 自媒体专用）：发布前按平台换掉软件名、Logo、网址和导流；发布后判断是否限流，按「先改文字 → 再换封面 → 最后改视频」抢救。思路参考咕噜奇（@hmq1048762）公开分享的经验，重新整理。
 - **先锋选题** `cxf-topic` 1.1.0：交完题后问「挑哪条？回编号，我帮你写成口播稿」，回编号直接进入写稿；去掉选题结束后主动回写档案的流程。
-- 总入口 `cxf` 1.3.0：介绍五个板块，写稿、检查类请求直接分流。
+- 总入口 `cxf` 1.3.0：介绍六个板块，写稿、检查、防限流类请求直接分流。
 - 总名改为 **崔先锋 CXF Skill**；各板块名和口令不变（仍说「用 CXF 选题 Skill」等）。
 - 说明从「国内 Agent 可用」改为「国内外支持 Skill 的 Agent 都能用」。
-- 验证：`npx skills add cuixianfeng/cxf-skill --list` 应列出 `cxf`、`cxf-library`、`cxf-topic`、`cxf-script`、`cxf-check`、`cxf-fetch`。
+- 验证：`npx skills add cuixianfeng/cxf-skill --list` 应列出 `cxf`、`cxf-library`、`cxf-topic`、`cxf-script`、`cxf-check`、`cxf-safe`、`cxf-fetch`。
 
 发布本版：
 

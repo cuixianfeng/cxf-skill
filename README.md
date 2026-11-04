@@ -4,9 +4,9 @@
 
 **让 AI 认识你，再帮你做自媒体。** 崔先锋 CXF 是一套中文 Agent Skill，作者：崔先锋。国内外支持 Skill 的 Agent 都能用（WorkBuddy、Claude Code、Codex 等），档案可存进腾讯 ima 或本地。
 
-关键词：AI自媒体、自媒体选题、口播稿、文案检查、个人知识库、资料库、内容抓取、WorkBuddy、ima。
+关键词：AI自媒体、自媒体选题、口播稿、文案检查、防限流、个人知识库、资料库、内容抓取、WorkBuddy、ima。
 
-## 五个板块
+## 六个板块
 
 | 板块 | 做什么 | 状态 |
 |---|---|---|
@@ -14,6 +14,7 @@
 | 先锋选题 cxf-topic | 每天给你出选题，先读你的资料库，每条注明依据编号 | ✅ 已发布 |
 | 先锋写稿 cxf-script | 把挑中的选题写成你能直接念的口播稿，另附 2 个备选开头 | ✅ 已发布 |
 | 先锋检查 cxf-check | 发布前查稿：风险词、AI 味、顺不顺 | ✅ 已发布 |
+| 先锋防限流 cxf-safe | AI 自媒体专用：发布前换掉软件名、Logo、导流；被限流了一步步抢救 | ✅ 已发布 |
 | 先锋抓取 cxf-fetch | 抓链接、对标账号、热点内容 | ✅ 已发布 |
 
 另有总入口 `cxf`：不知道从哪开始，就说「先锋能帮我做什么」，它会介绍各个板块，并把你的话交给对的板块。
@@ -28,11 +29,11 @@
 npx skills add cuixianfeng/cxf-skill
 ```
 
-会装上本仓库里的全部 Skill（`cxf`、`cxf-library`、`cxf-topic`、`cxf-script`、`cxf-check` 和 `cxf-fetch`）。
+会装上本仓库里的全部 Skill（`cxf`、`cxf-library`、`cxf-topic`、`cxf-script`、`cxf-check`、`cxf-safe` 和 `cxf-fetch`）。
 
 **方式二：手动安装**
 
-把仓库里 `skills/` 下的 `cxf`、`cxf-library`、`cxf-topic`、`cxf-script`、`cxf-check`、`cxf-fetch` 文件夹，整个复制到你所用 Agent 的 skills 目录下。只想要资料库，复制 `cxf-library` 一个也能用；只要选题，复制 `cxf-topic`（出题会读【我的档案】，建议同时保留 `cxf-library`）；写稿 `cxf-script` 同样读【我的档案】；检查 `cxf-check` 单独就能用；只要抓取，复制 `cxf-fetch` 即可。
+把仓库里 `skills/` 下的 `cxf`、`cxf-library`、`cxf-topic`、`cxf-script`、`cxf-check`、`cxf-safe`、`cxf-fetch` 文件夹，整个复制到你所用 Agent 的 skills 目录下。只想要资料库，复制 `cxf-library` 一个也能用；只要选题，复制 `cxf-topic`（出题会读【我的档案】，建议同时保留 `cxf-library`）；写稿 `cxf-script` 同样读【我的档案】；检查 `cxf-check`、防限流 `cxf-safe` 单独就能用；只要抓取，复制 `cxf-fetch` 即可。
 
 **方式三：WorkBuddy 用户**
 
@@ -178,6 +179,20 @@ npx skills add cuixianfeng/cxf-skill
 - 或者说「用 CXF 检查 Skill，检查这篇稿子」，再贴上稿子（自己写的也行）
 
 稿子没问题就直接说能发。只改说法，不改你的观点和故事。风险词只提示「可能有风险」，不保证过审。
+---
+
+# 先锋防限流 cxf-safe（AI 自媒体专用）
+
+**讲 AI 工具、智能体、软件教程的博主专用。** 这类视频最容易因为露出具体软件名、Logo、网址和导流被平台抽检限流。
+
+## 怎么用
+
+- 发之前：「用 CXF 防限流 Skill，我要发小红书」，再贴上稿子、标题、标签。它按平台列出口播字幕要换的词、画面要打码的地方、标题和标签改法、封面提醒。
+- 发之后：「是不是被限流了？发了 1 小时，播放 30，推荐页占比 0%」。它先判断是不是真限流，再告诉你下一步只改哪一处：先改文字，再换封面，最后才动视频本身。
+
+平台松紧按博主实测经验：小红书最严，抖音中等，B 站、视频号、快手较松。这是经验，不是官方规则，不保证不限流。只处理软件名、Logo、导流这类露出问题，不帮违规内容绕过审核。
+
+思路参考：咕噜奇（@hmq1048762）公开分享的[防限流经验](https://x.com/hmq1048762/status/2107043028229906793)，本 Skill 用自己的话重新整理。
 
 ---
 
@@ -209,7 +224,7 @@ npx skills add cuixianfeng/cxf-skill
 
 ## 版本
 
-当前版本 1.3.0（`cxf` 1.3.0，`cxf-library` 1.0.0，`cxf-topic` 1.1.0，`cxf-script` 1.0.0，`cxf-check` 1.0.0，`cxf-fetch` 1.0.0）（见 [VERSION](VERSION)）。
+当前版本 1.3.0（`cxf` 1.3.0，`cxf-library` 1.0.0，`cxf-topic` 1.1.0，`cxf-script` 1.0.0，`cxf-check` 1.0.0，`cxf-safe` 1.0.0，`cxf-fetch` 1.0.0）（见 [VERSION](VERSION)）。
 
 ## License
 

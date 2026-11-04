@@ -1,4 +1,4 @@
 interface:
   display_name: "cxf（崔先锋 CXF 总入口）"
-  short_description: "崔先锋 CXF 总入口：介绍资料库、选题、写稿、检查、抓取五个板块，并把你的请求交给对的板块"
+  short_description: "崔先锋 CXF 总入口：介绍资料库、选题、写稿、检查、防限流、抓取六个板块，并把你的请求交给对的板块"
   default_prompt: "使用 $cxf，先锋能帮我做什么？"

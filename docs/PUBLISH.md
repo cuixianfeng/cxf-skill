@@ -24,6 +24,7 @@
 - `skills/cxf-script/`：崔先锋写稿（把选题写成口播稿，另附 2 个备选开头）
 - `skills/cxf-check/`：崔先锋检查（四项分开查：AI 味、防限流、逻辑连贯、看不懂）
 - `skills/cxf-safe/`：崔先锋防限流（AI 自媒体专用：软件名、Logo、导流；限流判断与抢救）
+- `skills/cxf-review/`：崔先锋复盘（发布后要截图和客资数，写进「数据复盘」文件夹，满 10 条再总结规律）
 - `skills/cxf-fetch/`：崔先锋抓取（链接 / 对标账号 / 逐字稿）
 
 ## 发布步骤
@@ -85,7 +86,7 @@ git tag v1.2.0
 - 新增 **崔先锋防限流** `cxf-safe`（AI 自媒体专用）：发布前按平台换掉软件名、Logo、网址和导流；发布后判断是否限流，按「先改文字 → 再换封面 → 最后改视频」抢救。思路参考咕噜奇（@hmq1048762）公开分享的经验，重新整理。
 - **崔先锋选题** `cxf-topic` 1.1.0：交完题后问「挑哪条？回编号，我帮你写成口播稿」，回编号直接进入写稿；去掉选题结束后主动回写档案的流程。
 - 总入口 `cxf` 1.3.0：介绍六个板块，写稿、检查、防限流类请求直接分流。
-- 总名改为 **崔先锋 CXF Skill**；各板块名统一为「崔先锋资料库」「崔先锋检查」等，不再单独出现「先锋」；口令不变（仍说「用 CXF 选题 Skill」等）。
+- 总名改为 **崔先锋 CXF Skill**；各板块名统一为「崔先锋资料库」「崔先锋检查」等，名称里一律带「崔」；口令不变（仍说「用 CXF 选题 Skill」等）。
 - 说明从「国内 Agent 可用」改为「国内外支持 Skill 的 Agent 都能用」。
 - 验证：`npx skills add cuixianfeng/cxf-skill --list` 应列出 `cxf`、`cxf-library`、`cxf-topic`、`cxf-script`、`cxf-check`、`cxf-safe`、`cxf-fetch`。
 
@@ -94,4 +95,19 @@ git tag v1.2.0
 ```bash
 git tag v1.3.0
 # GitHub Release 标题：「v1.3.0 崔先锋写稿 cxf-script + 崔先锋检查 cxf-check」
+```
+
+## 1.4.0（2026-11-04）
+
+- 新增 **崔先锋复盘** `cxf-review`：视频发出 48～72 小时后，主动告诉用户截哪一页后台数据、问客资数；读数先复述确认，再写进知识库里的「数据复盘」文件夹（每条复盘记录含稿子原文 + 复盘汇总 + 规律），不写进【我的档案】。不到 10 条只记录和出复盘卡；满 10 条才总结，结论标「待验证」；同类 3 条以上对得上才成「规律」。
+- **崔先锋选题** `cxf-topic` 1.2.0：出题前读「数据复盘」里的「规律」；定时任务交付末尾提醒复盘。
+- **崔先锋写稿** `cxf-script` 1.1.0：写稿前读「规律」里和开头、写法有关的条目。
+- 总入口 `cxf` 1.4.0：介绍七个板块，复盘类请求直接分流。
+- 验证：`npx skills add cuixianfeng/cxf-skill --list` 应列出 `cxf`、`cxf-library`、`cxf-topic`、`cxf-script`、`cxf-check`、`cxf-safe`、`cxf-review`、`cxf-fetch`。
+
+发布本版：
+
+```bash
+git tag v1.4.0
+# GitHub Release 标题：「v1.4.0 崔先锋复盘 cxf-review」
 ```

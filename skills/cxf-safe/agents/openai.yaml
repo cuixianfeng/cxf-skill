@@ -1,4 +1,4 @@
 interface:
-  display_name: "cxf-safe（先锋防限流 · AI 自媒体专用）"
+  display_name: "cxf-safe（崔先锋防限流 · AI 自媒体专用）"
   short_description: "AI 自媒体专用：发布前按平台换掉软件名、Logo、网址和导流；发布后判断是否限流并从小到大抢救"
   default_prompt: "使用 $cxf-safe，用 CXF 防限流 Skill 帮我看看这条会不会被限流。"

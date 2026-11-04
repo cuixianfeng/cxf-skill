@@ -1,4 +1,4 @@
 interface:
-  display_name: "先锋抓取"
+  display_name: "崔先锋抓取"
   short_description: "发链接或说调研某个博主，抓公开作品清单和逐字稿，供对标学习"
   default_prompt: "使用 $cxf-fetch，帮我抓这个链接。"

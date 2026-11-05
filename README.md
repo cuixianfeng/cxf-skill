@@ -188,7 +188,6 @@ npx skills add cuixianfeng/cxf-skill
 
 稿子没问题就直接说能发。只改说法，不改你的观点、故事和数字，不加编的细节。风险词只提示「可能有风险」，不保证过审。
 
-思路参考 Humanizer、Humanizer-zh、lieflat-less-ai-tone、说人话、qu-ai-wei、stop-slop 等公开的去 AI 味 Skill 和 SkillHub 上的违禁词检测 Skill，按短视频口播重新整理，来源见 Skill 文件末尾。
 ---
 
 # 崔先锋防限流 cxf-safe（AI 自媒体专用）
@@ -201,8 +200,6 @@ npx skills add cuixianfeng/cxf-skill
 - 发之后：「是不是被限流了？发了 1 小时，播放 30，推荐页占比 0%」。它先判断是不是真限流，再告诉你下一步只改哪一处：先改文字，再换封面，最后才动视频本身。
 
 平台松紧按博主实测经验：小红书最严，抖音中等，B 站、视频号、快手较松。这是经验，不是官方规则，不保证不限流。只处理软件名、Logo、导流这类露出问题，不帮违规内容绕过审核。
-
-思路参考：咕噜奇（@hmq1048762）公开分享的[防限流经验](https://x.com/hmq1048762/status/2107043028229906793)，本 Skill 用自己的话重新整理。
 
 ---
 
